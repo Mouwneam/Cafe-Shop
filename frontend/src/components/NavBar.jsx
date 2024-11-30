@@ -1,14 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { navLinks } from '../constants'
 import cartImg from '../assets/icons/whiteCart.png';
 import hamburgerwhite from '../assets/icons/hamburgerwhite.png';
 import { Link, Outlet } from "react-router-dom";
 import { GiCancel } from "react-icons/gi";
-import {cart, calculateCartQuantity} from "../constants/cart";
+import { ShopContext } from '../context/cartContext';
+
 
 const NavBar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
+  const {cartItem} = useContext(ShopContext);
+  let cartQuantity = 0
+
+  for(const [key, value] of Object.entries(cartItem)){
+    cartQuantity +=  value;
+  }
 
   function toggleNavBar(){
     setIsOpen(!isOpen)
@@ -56,7 +63,7 @@ const NavBar = () => {
           </Link>
           <p className='absolute top-[-10px] right-[1px] text-white
           bg-yellow-500 px-[7px] text-sm rounded-xl py-[1px]'>
-            {calculateCartQuantity()}
+            {cartQuantity}
           </p>
           
         </div>
