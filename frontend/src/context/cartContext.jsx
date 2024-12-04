@@ -24,7 +24,11 @@ const cartContext = (props) => {
     setCartItem((prev) => ({...prev, [productId]: prev[productId] - 1 }))
   }
 
-  const ContextValue = {cartItem, addToCart, removeFromCart};
+  const trashFromCart = (productId) => {
+    setCartItem((prev) => ({...prev, [productId]: 0}))
+  }
+
+  const ContextValue = {cartItem, addToCart, removeFromCart, trashFromCart};
 
   console.log(cartItem)
   return (

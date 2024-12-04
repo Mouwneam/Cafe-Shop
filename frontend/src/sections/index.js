@@ -8,6 +8,7 @@ import OurChef from './OurChef';
 import Footer from './Footer';
 import Discovery from './Discovery';
 import ContactForm from './ContactForm';
+import PreFooter from './PreFooter';
 
 export {
     Header,
@@ -20,4 +21,6 @@ export {
     Footer,
     Discovery,
     ContactForm,
+    PreFooter,
+    
 }
