@@ -1,5 +1,5 @@
 import '../index.css';
-import { Header, HeadExplore, AboutUs, Services, NewDishes, BestChoice, OurChef, Footer } from '../sections';
+import { Header, HeadExplore, AboutUs, Services, NewDishes, BestChoice, OurChef, Footer, PreFooter } from '../sections';
 
 function Home (){
 
@@ -32,6 +32,10 @@ function Home (){
 
         <section>
             <OurChef></OurChef>
+        </section>
+
+        <section>
+            <PreFooter></PreFooter>
         </section>
 
         <section className='bg-black pb-8 sm:px-16 px-8 sm:pt-24 pt-12  mt-20'>

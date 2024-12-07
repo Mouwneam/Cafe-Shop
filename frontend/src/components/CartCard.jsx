@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import { products } from '../constants'
 import { ShopContext } from '../context/cartContext';
 import { FaRegTrashCan } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const CartCard = ({cart, quantity}) => {
 
@@ -19,13 +20,13 @@ const CartCard = ({cart, quantity}) => {
 
   return (
     <div className='flex gap-7 relative '>
-        <div className='w-36 '>
+        <Link className='w-36' to={`../menu/products/${cart.id}`}>
             <img src={cart.img} alt="" className='rounded-md' />
-        </div>
+        </Link>
         <div>
-          <div>
+          <Link to={`../menu/products/${cart.id}`}>
             <p className='text-2xl'>{cart.name}</p>
-          </div>
+          </Link>
           <div className='mt-7'>
             <p className='text-xl mb-4'>${cart.price}</p>
             <div className='flex gap-3 border w-20 px-2 justify-between rounded-xl items-center'>

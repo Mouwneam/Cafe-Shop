@@ -9,6 +9,7 @@ import ContactUs from './pages/ContactUs.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 import  CartContext  from './context/cartContext.jsx';
 import CartDetail from './pages/CartDetail.jsx';
+import ProductDetail from './pages/ProductDetail.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/cart",
     element: <CartDetail></CartDetail>
+  },
+  {
+    path: "menu/products/:productId",
+    element: <ProductDetail></ProductDetail>
   }
 ]);
 
