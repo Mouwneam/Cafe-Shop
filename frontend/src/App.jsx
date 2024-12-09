@@ -35,7 +35,9 @@ function App() {
   return(
     <main className='relative'>
 
-      <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router} >
+
+      </RouterProvider>
 
     </main>
   )
