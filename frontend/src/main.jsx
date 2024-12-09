@@ -11,7 +11,7 @@ import  CartContext  from './context/cartContext.jsx';
 import CartDetail from './pages/CartDetail.jsx';
 import ProductDetail from './pages/ProductDetail.jsx';
 
-const router = createBrowserRouter([
+/*const router = createBrowserRouter([
   {
     path: '/',
     element: <Home></Home>,
@@ -34,11 +34,14 @@ const router = createBrowserRouter([
     element: <ProductDetail></ProductDetail>
   }
 ]);
+ put in strict mode
+<RouterProvider router={router}></RouterProvider>
+*/
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CartContext>
-      <RouterProvider router={router}></RouterProvider>
+      <App></App>
     </CartContext>
   </StrictMode>,
 )
