@@ -31,7 +31,7 @@ function App() {
     path: "menu/products/:productId",
     element: <ProductDetail></ProductDetail>
   }
-]);
+], {basename: "/Cafe-Shop/frontend"});
   return(
     <main className='relative'>
 
