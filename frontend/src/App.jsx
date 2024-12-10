@@ -31,7 +31,7 @@ function App() {
     path: "menu/products/:productId",
     element: <ProductDetail></ProductDetail>
   }
-], {basename: "https://mouwneam.github.io//Cafe-Shop/frontend"});
+], {basename: "/Cafe-Shop"});
   return(
     <main className='relative'>
 
